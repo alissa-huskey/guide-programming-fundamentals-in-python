@@ -48,7 +48,7 @@ Here is a GIF demonstrating how to run your first python program. Feel free to e
 1. Create a new file containing the following code in the text editor (middle panel):
 
 	```py
-	print 'Welcome to Pypet!'
+	print('Welcome to Pypet!')
 	```
 
 2. Go ahead and save the file as “pypet.py”. 
@@ -130,10 +130,10 @@ Variables are a way of storing information in Python. Below we'll create differe
 	hungry = False
 	photo = '(=^o.o^=)__'
 	
-	print 'Hello ' + name
-	print photo
+	print('Hello ' + name)
+	print(photo)
 	```
-	By writing `print 'Hello ' + name` we just concatenated (aka *linked together*) the string `'Hello '` with the variable `name` so that the console will print out `Hello Fluffy`. Don't forget to type `python pypet.py` in the console (bottom window) and hit enter after you save to see this happen. Your console should look like:
+	By writing `print('Hello ' + name)` we just concatenated (aka *linked together*) the string `'Hello '` with the variable `name` so that the console will print out `Hello Fluffy`. Don't forget to type `python pypet.py` in the console (bottom window) and hit enter after you save to see this happen. Your console should look like:
 	
 	![](http://i.imgur.com/EDsC0Fk.png)
 	
@@ -168,7 +168,7 @@ We need a way to tell Python that all of these variables represent one cat (or d
 	  'photo': '(=^o.o^=)__',
 	}
 
-	print cat
+	print(cat)
 	```
 
 3. Print your Pypet's name and photo. You can access variables in an array by using the format `dictionary['attribute']` such as `cat['name']`.
@@ -182,10 +182,10 @@ We need a way to tell Python that all of these variables represent one cat (or d
 	  'photo': '(=^o.o^=)__',
 	}
 
-	print 'Hello ' + cat['name']
-	print cat['photo']
+	print('Hello ' + cat['name'])
+	print(cat['photo'])
 
-	print cat
+	print(cat)
 	```
 	 Don't forget to first save your file and then run your file in the console by typing `python pypet.py` and pressing enter.
 
@@ -229,10 +229,10 @@ Let's “feed” our pypet using a Python function. A [function](http://www.tuto
 
 	Use this notation to increase floats and integers. 
 	
-4. Try setting your original Pypet’s hungry variable to `True` and include a `print cat` statement after `feed(cat)` to see if your Pypet's `hungry` variable changed to `False` and their `weight` variable incrased.
+4. Try setting your original Pypet’s hungry variable to `True` and include a `print(cat)` statement after `feed(cat)` to see if your Pypet's `hungry` variable changed to `False` and their `weight` variable incrased.
 
 	```py
-	print 'Welome to Pypet!'
+	print('Welome to Pypet!')
 	
 	cat = {
 	  'name': 'Fluffy',
@@ -246,9 +246,9 @@ Let's “feed” our pypet using a Python function. A [function](http://www.tuto
 			pet['hungry'] = False
 			pet['weight'] = pet['weight'] + 1
 	
-	print cat
+	print(cat)
 	feed(cat)
-	print cat
+	print(cat)
 	```
 
 	When the cat is printed out the second time his weight attribute will have increased. Don't forget to save and then run your python file from the console.
@@ -269,11 +269,11 @@ If the Pypet is hungry the program will set his hungry variable to `False` and i
 			pet['hungry'] = False
 			pet['weight'] = pet['weight'] + 1
 		else:
-			print 'The Pypet is not hungry!'
+			print('The Pypet is not hungry!')
 	
-	print cat
+	print(cat)
 	feed(cat)
-	print cat
+	print(cat)
 	```
 	Notice that we use two equals sign (`==`) to check a condition (for example `pet['hungry'] == True`). Only if the condition is not met the code beneath the `else:` will execute. Remember, one equal sign is used to assigned a value to a variable (`pet['hungry'] = True` makes our Pypet hungry), two equal signs are used to check if a condition is true (`pet['hungry'] == True` checks whether our Pypet is hungry).
 
@@ -285,11 +285,11 @@ If the Pypet is hungry the program will set his hungry variable to `False` and i
         	pet['hungry'] = False
 	        pet['weight'] = pet['weight'] + 1
 	    else:
-	        print 'The Pypet is not hungry!'
+	        print('The Pypet is not hungry!')
 	
-	print cat
+	print(cat)
 	feed(cat)
-	print cat
+	print(cat)
 	feed(cat)
 	```
 
@@ -326,7 +326,7 @@ What if we want to feed all the pets in our list? If we want to run a function o
 ```py
 for pet in pets:
 	feed(pet)
-  	print pet
+  	print(pet)
 ```
 
 Take a screenshot of your Pypets and tweet them [@Thinkful](https://twitter.com/thinkful) so I can share your creation with the world!
